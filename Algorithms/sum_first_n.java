@@ -15,10 +15,11 @@ public class sum_first_n {
      */
     Scanner sc = new Scanner(System.in);
 
-    System.out.println("Insert number: ");
+    System.out.print("Insert number: ");
     int number = sc.nextInt();
 
     System.out.println(findSum(number));
+    System.out.println(findSum2(number));
 
     sc.close();
   }
@@ -27,5 +28,13 @@ public class sum_first_n {
   public static int findSum(int n) {
     return n * (n + 1) / 2;
   }
+
+  /* Solve 2 with loop */
+  public static int findSum2(int n) {
+    int sum = 0;
+    for (int i = 0; i <= n; i++) {
+      sum += i;
+    }
+    return sum;
+  }
 }
-/* Solve 2 */
